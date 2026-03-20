@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    padding: 0;
+
+}
+header{
+    border: 1px solid red;
+    display: flex;
+    position: relative;
+    overflow: visible;
+    z-index: 1;
+
+}
+
+.nav-bar{
+    border: 1px solid blue;
+    display: flex;
+    overflow: visible;
+    position: relative;
+    z-index: 1;
+}
+
+.nav-bar a{
+    border: 1px solid green;
+
+}
+
+.menu {
+  position: relative;
+}
+
+#botao {
+ 
+
+}
+
+.dropdown {
+  display: none;
+  min-width: 180px;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.dropdown.ativo {
+  display: block;
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown a:hover {
+  background: #ddd;
+}
+
+.secao1 {
+  height: 500px;
+}
