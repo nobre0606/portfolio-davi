@@ -1,28 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+
 body{
     margin: 0;
     padding: 0;
+    font-family: "Inter", sans-serif;
 
 }
 header{
+    height: 80px;
     border: 1px solid red;
     display: flex;
     position: relative;
     overflow: visible;
     z-index: 1;
+    justify-content: left;
+    align-items: center;
 
 }
 
+.div-assinatura{
+  border: 1px solid brown;
+  height: 10px;
+  width: 10px;
+  margin-left: 40px;
+}
+
+
 .nav-bar{
+    height: 32px;
     border: 1px solid blue;
     display: flex;
     overflow: visible;
     position: relative;
     z-index: 1;
+    margin-left: 70px;
+    align-items: center;
+    gap: 25px;
+    
 }
 
-.nav-bar a{
+.sobre-mim-a{
+    height: fit-content;
     border: 1px solid green;
-
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+  
 }
 
 .menu {
@@ -30,7 +54,12 @@ header{
 }
 
 #botao {
- 
+  height: fit-content;
+  background-color: transparent;
+  border: none;
+  border:1px solid red;
+  font-weight: 700;
+  font-size: 16px;
 
 }
 
@@ -47,10 +76,14 @@ header{
 }
 
 .dropdown a {
+  font-size: 16px;
+  font-family: "inter",sans-serif;
   display: block;
-  padding: 10px;
+  padding: 1px ;
   text-decoration: none;
   color: black;
+  align-self: center;
+  height: 20px;
 }
 
 .dropdown a:hover {
@@ -58,5 +91,29 @@ header{
 }
 
 .secao1 {
-  height: 500px;
+  height: 851px;
+  background-color: brown;
+  align-content: center;
+  justify-items: center;
+}
+
+.text-img{
+  border: 1px solid black;
+  width: 90%;
+  height: 700px;
+  
+}
+
+.div-presatation{
+  border: 1px solid white;
+  width: fit-content;
+  
+}
+
+.div-presatation h1{
+  border: 1px solid blue;
+}
+
+.div-presatation p{
+  border: 1px solid yellow;
 }
