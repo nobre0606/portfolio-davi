@@ -9,18 +9,9 @@ html {
 }
 
 body {
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "San Francisco",
-        "SF Pro Display",
-        "Helvetica Neue",
-        Arial,
-        sans-serif;
-
-    background: #ffffff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    background: #f7f6f3;
     color: #111;
-
     overflow-x: hidden;
 }
 
@@ -114,25 +105,18 @@ body {
 /* HERO */
 
 .hero {
-
-    position: relative;
-
     display: flex;
-    justify-content: space-between;
-
-    padding: 80px 80px 0;
-
     height: calc(100vh - 88px);
+    overflow: hidden;
 }
 
 .left {
-
+    flex: 1;
     display: flex;
     flex-direction: column;
-
     gap: 40px;
-
-    margin-top: 60px;
+    padding: 80px 60px 60px 80px;
+    justify-content: center;
 }
 
 
@@ -176,14 +160,18 @@ body {
 }
 
 h1 {
-
     font-size: 96px;
     font-weight: 600;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -3px;
+    line-height: 1;
 }
 
 .subtitle {
-
-    font-size: 18px;
+    font-size: 32px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
     color: #374151;
 }
 
@@ -209,26 +197,34 @@ h1 {
 /* IMAGE POSITION */
 
 .right {
-    position: absolute;
-    bottom: 40px;
-    left: 48%;
-    transform: translateX(-50%);
+    width: 44%;
+    min-width: 400px;
+    height: 620px;
+    flex-shrink: 0;
+    background: #e8e2d9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    margin-right: 10vh;
+    border-radius: 20px;
+    align-self: center;
 }
 
 .image-placeholder {
-    width: 850px;
-    height: 900px;
-    border-radius: 20px;
+    width: 100%;
+    height: 75%;
+    border-radius: 16px;
     overflow: hidden;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    
 }
 
 .image-placeholder img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 .circle {
@@ -259,6 +255,26 @@ h1 {
     text-align: center;
     font-size: 36px;
 }
+
+.container-objetivos {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+    align-content: center;
+    
+}
+
+.container-objetivos p {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #374151;
+
+    text-align: center;
+}
+
 
 
 /* ABOUT */
@@ -331,16 +347,7 @@ h1 {
     margin-bottom: 24px;
 }
 
-.objetivos p {
 
-    font-size: 18px;
-
-    line-height: 1.7;
-
-    max-width: 900px;
-
-    color: #374151;
-}
 
 
 /* AMIGOS */

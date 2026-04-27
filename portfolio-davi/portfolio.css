@@ -9,8 +9,8 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
-    background: #ffffff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    background: #f7f6f3;
     color: #111;
     line-height: 1.5;
     overflow-x: hidden;
@@ -167,8 +167,9 @@ body {
 .main-section h1 {
     font-size: 64px;
     font-weight: 600;
-    margin-bottom: 60px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
     letter-spacing: -2px;
+    margin-bottom: 60px;
 }
 
 .sub-section {
@@ -178,7 +179,9 @@ body {
 .sub-section h2 {
     font-size: 28px;
     margin-bottom: 32px;
-    font-weight: 500;
+    font-weight: 400;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
     color: #666;
 }
 
@@ -249,10 +252,28 @@ body {
     margin-bottom: 4px;
 }
 
-.atividade-habilidades {
-    font-size: 14px;
-    color: #888;
+.atividade-title-portfolio{
+    text-align: center;
 }
+
+.atividade-title-portfolio a{
+    text-decoration: none;
+    color: #000;
+   
+}
+
+.atividade-desc {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.55;
+    margin-bottom: 8px;
+}
+
+.atividade-habilidades {
+    font-size: 13px;
+    color: #aaa;
+}
+
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
