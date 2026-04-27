@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "San Francisco",
+        "SF Pro Display",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    background: #ffffff;
+    color: #111;
+
+    overflow-x: hidden;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 24px 48px;
+    
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background-color: transparent;
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+
+.logo {
+    width: 200px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: all 0.2s ease;
+    overflow: hidden;
+    pointer-events: auto;
+}
+
+.navbar.scrolled .logo {
+    width: 0;
+    opacity: 0;
+    margin: 0;
+}
+
+.navbar.scrolled .menu {
+    margin: 0 auto;
+}
+
+.diamond {
+    width: 100%;
+    height: 100%;
+    background: url('images/assinatura.png') no-repeat left center;
+    background-size: contain;
+}
+
+.menu {
+
+    display: flex;
+    gap: 32px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #222;
+    font-size: 16px;
+    font-weight: 500;
+    
+    padding: 10px 24px;
+    border-radius: 20px;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+    border: 1px solid transparent;
+    pointer-events: auto;
+    transition: all 0.2s ease;
+}
+
+.menu a:hover {
+    transform: translateY(-2px);
+    opacity: 0.6;
+}
+
+.navbar.scrolled .menu a {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.navbar.scrolled .menu a:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+}
+
+
+/* HERO */
+
+.hero {
+
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 80px 80px 0;
+
+    height: calc(100vh - 88px);
+}
+
+.left {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 40px;
+
+    margin-top: 60px;
+}
+
+
+/* STATS */
+
+.stats {
+
+    display: flex;
+    gap: 80px;
+}
+
+.stat h2 {
+
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.stat p {
+
+    font-size: 14px;
+    color: #6b7280;
+}
+
+
+/* TITLE */
+
+.title-area {
+
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.vertical-text {
+
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+h1 {
+
+    font-size: 96px;
+    font-weight: 600;
+}
+
+.subtitle {
+
+    font-size: 18px;
+    color: #374151;
+}
+
+
+/* SCROLL BUTTON */
+
+.scroll-btn {
+    margin-bottom: 43px;
+    margin-top: auto;
+    font-size: 14px;
+    color: #6b7280;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.scroll-btn:hover {
+    transform: translateY(2px);
+    opacity: 0.7;
+}
+
+
+/* IMAGE POSITION */
+
+.right {
+    position: absolute;
+    bottom: 40px;
+    left: 48%;
+    transform: translateX(-50%);
+}
+
+.image-placeholder {
+    width: 850px;
+    height: 900px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.circle {
+
+    width: 90px;
+    height: 90px;
+
+    background: #9ca3af;
+
+    border-radius: 50%;
+}
+
+
+/* SECTIONS */
+
+.section {
+
+    padding: 80px;
+}
+
+.container {
+
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.container h2{
+    text-align: center;
+    font-size: 36px;
+}
+
+
+/* ABOUT */
+
+.about-container {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+.about-image img{
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+.about-image {
+
+    width: 420px;
+
+    height: 520px;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    background: #d1d5db;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.about-text h2 {
+
+    font-size: 48px;
+
+    margin-bottom: 20px;
+}
+
+.about-text p {
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    color: #374151;
+
+    max-width: 600px;
+}
+
+
+/* OBJETIVOS */
+
+.objetivos h2 {
+
+    font-size: 42px;
+
+    margin-bottom: 24px;
+}
+
+.objetivos p {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    max-width: 900px;
+
+    color: #374151;
+}
+
+
+/* AMIGOS */
+
+.friends-grid {
+
+    display: flex;
+
+    gap: 16px;
+
+    margin-top: 40px;
+
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.friend-card {
+
+    width: 150px;
+    height: 222px;
+
+    background: #d1d5db;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+
+    color: #6b7280;
+}
+
+.friend-card img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+.namorada-card {
+
+    width: 200px;
+    height: 296px;
+
+    background: #d1d5db;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+
+    color: #6b7280;
+    align-self: center;
+}
+
+.namorada-card img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}

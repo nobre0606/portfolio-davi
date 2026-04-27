@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    background: #ffffff;
+    color: #111;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 9999;
+    padding: 16px 48px;
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+
+
+.logo {
+    width: 180px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease;
+    overflow: hidden;
+    pointer-events: auto;
+}
+
+.navbar.scrolled .logo {
+    width: 0;
+    opacity: 0;
+    margin: 0;
+}
+
+.navbar.scrolled .menu {
+    margin: 0 auto;
+}
+
+.diamond {
+    width: 100%;
+    height: 100%;
+    background: url('images/assinatura.png') no-repeat left center;
+    background-size: contain;
+}
+
+.menu {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-left: 40px; /* Space between logo and menu */
+}
+
+.item-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.item-menu a, .botao-menu {
+    text-decoration: none;
+    color: #111;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 24px;
+    border-radius: 20px;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    height: 44px;
+    pointer-events: auto;
+}
+
+.item-menu a:hover, .botao-menu:hover {
+    opacity: 0.6;
+}
+
+.navbar.scrolled .item-menu a, .navbar.scrolled .botao-menu {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.navbar.scrolled .item-menu a:hover, .navbar.scrolled .botao-menu:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+}
+
+/* DROPDOWN */
+.menu-drop {
+    list-style: none;
+    padding: 8px;
+    margin: 0;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    min-width: 220px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.item-menu:hover .menu-drop {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.menu-drop li a {
+    display: block;
+    padding: 12px 16px;
+    font-size: 14px;
+    border-radius: 6px;
+    color: #444;
+}
+
+.menu-drop li a:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+    color: #000;
+    padding-left: 20px;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    margin-top: 120px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 48px 80px;
+}
+
+.main-section {
+    padding: 60px 0;
+}
+
+.main-section h1 {
+    font-size: 64px;
+    font-weight: 600;
+    margin-bottom: 60px;
+    letter-spacing: -2px;
+}
+
+.sub-section {
+    margin-bottom: 80px;
+}
+
+.sub-section h2 {
+    font-size: 28px;
+    margin-bottom: 32px;
+    font-weight: 500;
+    color: #666;
+}
+
+/* CARDS GRID */
+.div-card-flex {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 32px;
+}
+
+.div-card-flex--center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+}
+
+.div-card-flex--center .card-atividade {
+    flex: 0 1 420px;
+    max-width: 480px;
+}
+
+.card-atividade {
+    background: #fdfdfd;
+    border-radius: 20px;
+    padding: 24px;
+    border: 1px solid #f0f0f0;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-atividade:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    border-color: #e0e0e0;
+}
+
+.card-largo {
+    background: #fdfdfd;
+    border-radius: 20px;
+    padding: 24px;
+    border: 1px solid #f0f0f0;
+    margin-top: 32px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-largo:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    border-color: #e0e0e0;
+}
+
+.card-largo p {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.card-largo p:last-child {
+    margin-bottom: 0;
+}
+
+.card-largo strong {
+    color: #333;
+}
+
+.atividade-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.atividade-habilidades {
+    font-size: 14px;
+    color: #888;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .div-card-flex {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 16px 24px;
+    }
+    .main-content {
+        padding: 0 24px 60px;
+    }
+    .main-section h1 {
+        font-size: 40px;
+    }
+    .div-card-flex {
+        grid-template-columns: 1fr;
+    }
+}
