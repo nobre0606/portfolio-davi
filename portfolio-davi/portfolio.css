@@ -153,7 +153,6 @@ body {
 
 /* MAIN CONTENT */
 .main-content {
-    margin-top: 120px;
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
@@ -202,6 +201,12 @@ body {
 .div-card-flex--center .card-atividade {
     flex: 0 1 420px;
     max-width: 480px;
+}
+
+.div-card-flex--3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
 }
 
 .card-atividade {
@@ -295,4 +300,107 @@ body {
     .div-card-flex {
         grid-template-columns: 1fr;
     }
+}
+
+/* TRIM TOGGLE */
+.trim-toggle-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 28px 0 0;
+    margin-top: 92px;
+}
+
+.trim-toggle {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.trim-toggle-track {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 220px;
+    height: 48px;
+    background: rgba(0, 0, 0, 0.06);
+    border-radius: 999px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 4px;
+    transition: background 0.3s ease;
+}
+
+.trim-toggle-thumb {
+    position: absolute;
+    left: 4px;
+    width: calc(50% - 4px);
+    height: calc(100% - 8px);
+    background: #fff;
+    border-radius: 999px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+    transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 0;
+}
+
+.trim-toggle.active .trim-toggle-thumb {
+    left: calc(50%);
+}
+
+.trim-label {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #aaa;
+    transition: color 0.3s ease;
+    pointer-events: none;
+}
+
+.trim-label--left {
+    color: #111;
+}
+
+.trim-toggle.active .trim-label--left {
+    color: #aaa;
+}
+
+.trim-toggle.active .trim-label--right {
+    color: #111;
+}
+
+/* TRIM CONTENT */
+.trim-content {
+    display: none;
+    opacity: 0;
+    transform: translateY(16px);
+}
+
+.trim-content--active {
+    display: block;
+    animation: trimFadeIn 0.4s ease forwards;
+}
+
+@keyframes trimFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.trim-empty-msg {
+    color: #aaa;
+    font-style: italic;
+    font-size: 16px;
+    margin-top: 16px;
+    padding: 40px;
+    background: #fdfdfd;
+    border-radius: 16px;
+    border: 1px dashed #e0e0e0;
+    text-align: center;
 }
