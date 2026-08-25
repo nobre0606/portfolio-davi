@@ -34,8 +34,9 @@
         <div class="item-menu">
             <a href="#tecnico" class="botao-menu">Técnico</a>
             <ul class="menu-drop">
-                <li><a href="#modelagem">Modelagem de Sistemas</a></li>
-                <li><a href="#banco-dados">Banco de Dados</a></li>
+                <li class="trim1-item"><a href="#modelagem">Modelagem de Sistemas</a></li>
+                <li class="trim1-item"><a href="#banco-dados">Banco de Dados</a></li>
+                <li class="trim2-item" style="display: none;"><a href="#programacao">Programação de Aplicativos</a></li>
             </ul>
         </div>
 
@@ -47,7 +48,7 @@
             </ul>
         </div>
 
-        <div class="item-menu">
+        <div class="item-menu trim1-item">
             <a href="#extras" class="link-menu">Extras</a>
         </div>
     </nav>
@@ -331,7 +332,7 @@
             <!-- NATUREZA -->
             <article class="sub-section">
                 <h2>Ciências da Natureza</h2>
-                <div class="div-card-flex div-card-flex--center">
+                <div class="div-card-flex div-card-flex--3col">
                     <div class="card-atividade">
                         <div class="atividade-preview">
                             <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
@@ -357,6 +358,18 @@
                         <h3 class="atividade-title">Prancha - Eletroquímica</h3>
                         <p class="atividade-desc">Projeto interativo que aplica conceitos de eletroquímica, reações de oxirredução e transferência de elétrons para explicar fenômenos do cotidiano e o funcionamento de pilhas.</p>
                         <p class="atividade-habilidades">C2: H6 H7 H9</p>
+                    </div>
+                    <div class="card-atividade">
+                        <div class="atividade-preview">
+                            <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
+                                <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;"
+                                    src="https://www.canva.com/design/DAHSvIgnWUs/_Qas44lNa_qjq2WVAVjHwg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                                </iframe>
+                            </div>
+                        </div>
+                        <h3 class="atividade-title">Relatório de Ciências da Natureza</h3>
+                        <p class="atividade-desc">Elaboração de relatório científico estruturado, relacionando conceitos de física, química e biologia para explicar fenômenos naturais e procedimentos investigativos de forma organizada e fundamentada.</p>
+                        <p class="atividade-habilidades">C1: H3 H4 — C2: H12 — C4: H23</p>
                     </div>
                 </div>
             </article>
@@ -397,7 +410,26 @@
         <!-- TÉCNICO -->
         <section class="main-section">
             <h1>Técnico</h1>
-            <p class="trim-empty-msg">Em breve — conteúdo do 2º trimestre será adicionado aqui.</p>
+            
+            <article class="sub-section">
+                <h2>Programação de Aplicativos e Desenvolvimento de Sistemas</h2>
+                <div class="div-card-flex div-card-flex--center">
+                    <div class="card-atividade">
+                        <div class="atividade-preview">
+                            <div style="display: flex; align-items: center; justify-content: center; min-height: 200px; background-color: #24292e; border-radius: 8px; margin-top: 1.6em; margin-bottom: 0.9em; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16);">
+                                <div style="text-align: center; color: #fff;">
+                                    <div style="font-size: 40px; margin-bottom: 8px;">💻</div>
+                                    <div style="font-size: 18px; font-weight: 600; font-family: 'Inter', sans-serif; letter-spacing: 1px;">REPOSITÓRIO GITHUB</div>
+                                    <a href="https://github.com/Pingusto193/RinhaSenai2026FullStack" target="_blank" style="display: inline-block; margin-top: 16px; padding: 8px 24px; background-color: #2ea44f; color: #fff; text-decoration: none; border-radius: 4px; font-weight: bold; font-family: 'Inter', sans-serif; transition: background 0.3s;">Acessar Código</a>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="atividade-title">Projeto da BP - Promotora de crédito</h3>
+                        <p class="atividade-desc">Aplicação web Full Stack para simulação financeira, integrando painel, transferências e investimentos.<br>Desenvolvida com React (frontend) e Node.js com Express e SQLite (backend).<br>Implementa segurança via JWT, hash de senhas e upload de arquivos.<br>Evidencia a aplicação prática de requisitos de usabilidade e arquitetura de sistemas.</p>
+                        <p class="atividade-habilidades">H1 H4 H6</p>
+                    </div>
+                </div>
+            </article>
         </section>
 
     </div><!-- fim trim2-content -->
